@@ -1,2 +1,4 @@
-scikit-learn
-pandas
+Python 
+Pandas
+Scikit-learn
+vs code
