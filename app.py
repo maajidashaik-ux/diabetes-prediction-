@@ -1,8 +1,21 @@
-import joblib
 import pandas as pd
 import streamlit as st
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
-model = joblib.load("model.pkl")
+
+@st.cache_resource
+def get_model():
+    data = pd.read_csv("diabetes.csv")
+    x = data.drop(columns="Outcome")
+    y = data["Outcome"]
+    model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000))
+    model.fit(x, y)
+    return model
+
+
+model = get_model()
 
 st.title("Diabetes Prediction")
 
