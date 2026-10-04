@@ -1,4 +1,7 @@
-Python 
-Pandas
-Scikit-learn
-vs-code
+streamlit
+pandas
+scikit-learn
+joblib
+matplotlib
+seaborn
+ 
