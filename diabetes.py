@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import cross_val_score
 
-data = pd.read_csv(r"C:\Users\maaji\Downloads\diabetes.csv")
+data = pd.read_csv("diabetes.csv")
 
 x = data.drop(columns="Outcome")
 y = data["Outcome"]
